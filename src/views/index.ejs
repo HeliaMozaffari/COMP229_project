@@ -1,10 +1,181 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>BookNest Library</title>
-  </head>
-  <body>
-    <h1>BookNest Library Web Application</h1>
-    <p>This is my first release.</p>
-  </body>
-</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>BookNest First Release</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5ff;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            background-color: #1a1b2e;
+            color: #ffffff;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #1a1b2e;
+        }
+
+        .site-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .navbar-right a {
+            margin-left: 1rem;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .navbar-right a:hover {
+            text-decoration: underline;
+        }
+
+        /* HERO / LANDING SECTION */
+        .hero {
+            padding: 2rem 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-text {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 1rem;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 0.6rem 1.3rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid transparent;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: #4a4de7;
+            color: #ffffff;
+        }
+
+        .btn-secondary {
+            background-color: #ffffff;
+            color: #4a4de7;
+            border-color: #4a4de7;
+        }
+
+        /* BOOK LIST SECTION */
+        .section-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .book-card {
+            background: #ffffff;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            padding: 1rem;
+        }
+
+        .book-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .status-available {
+            color: green;
+            font-weight: bold;
+        }
+
+        .status-borrowed {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="navbar-left">
+            <!-- Simple logo circle with B -->
+            <div class="logo">B</div>
+            <div class="site-name">BookNest Library</div>
+        </div>
+        <nav class="navbar-right">
+            <a href="/">Home</a>
+            <a href="/signin">Sign In</a>
+            <a href="/signup">Sign Up</a>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="hero">
+        <!-- HERO / LANDING -->
+        <section>
+            <h1 class="hero-title">Welcome to BookNest Library</h1>
+            <p class="hero-text">
+                This is the first release of BookNest. Browse available books and manage your reading easily.
+            </p>
+
+            <div class="auth-buttons">
+                <a href="/signup" class="btn btn-primary">Sign Up</a>
+                <a href="/signin" class="btn btn-secondary">Sign In</a>
+            </div>
+        </section>
+
+        <!-- LIST OF OBJECTS (BOOKS) -->
+        <section>
+            <h2 class="section-title">Available Books</h2>
+            <div class="book-grid">
+                <article class="book-card">
+                    <div class="book-title">Clean Code</div>
+                    <p><strong>Author:</strong> Robert C. Martin</p>
+                    <p><strong>Genre:</strong> Programming</p>
+                    <p><strong>Status:</strong> <span class="status-available">Available</span></p>
+                </article>
+
+                <article class="book-card">
+                    <div class="book-title">You Don't Know JS</div>
+                    <p><strong>Author:</strong> Kyle Simpson</p>
+                    <p><strong>Genre
